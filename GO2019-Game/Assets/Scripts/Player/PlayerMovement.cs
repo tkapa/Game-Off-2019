@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 12f;
+    public float speed = 6f;
+    public float sprintSpeed = 12f; 
     public float gravity = -9.81f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     
+    public KeyCode sprintInput = KeyCode.LeftShift;
+
     CharacterController controller;
     Vector3 velocity;
+
     bool isGrounded;
+    bool isSprinting;
+
     float moveX = 0f;
     float moveZ = 0f;
 
@@ -24,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
     private void Update() {
         moveX = Input.GetAxis("Horizontal");
         moveZ = Input.GetAxis("Vertical");
+
+        if(Input.GetKeyDown(sprintInput)){
+            isSprinting = true;
+        } else if (Input.GetKeyUp(sprintInput)){
+            isSprinting = false;
+        }
     }
 
     // Update is called once per frame
@@ -32,7 +44,12 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
-        controller.Move(move * speed * Time.deltaTime);
+        
+        if(isSprinting){
+            controller.Move(move * sprintSpeed * Time.deltaTime);
+        } else {
+            controller.Move(move * speed * Time.deltaTime);
+        }
 
         if(isGrounded && velocity.y < 0){
             velocity.y = -2f;
