@@ -36,13 +36,7 @@ public class PlayerMovement : MonoBehaviour
         } else if (Input.GetKeyUp(sprintInput)){
             isSprinting = false;
         }
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         
         if(isSprinting){
@@ -57,5 +51,11 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
         }
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);       
     }
 }
