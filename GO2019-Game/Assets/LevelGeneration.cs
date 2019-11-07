@@ -12,7 +12,7 @@ public class LevelGeneration : MonoBehaviour
     public float minimumX;
     public float maximumX;
     public float minimumY;
-    private bool stoppedGeneration = false;
+    public bool stoppedGeneration = false;
 
     private int direction = 0;
     private int downCounter = 0;
