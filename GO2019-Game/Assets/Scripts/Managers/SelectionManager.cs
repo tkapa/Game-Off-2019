@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-    [SerializeField] private LayerMask pickupMask;
+    [SerializeField] private LayerMask pickupMask = 0;
     [SerializeField] private float pickupDistance = 5f;
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private string selectableTag;
