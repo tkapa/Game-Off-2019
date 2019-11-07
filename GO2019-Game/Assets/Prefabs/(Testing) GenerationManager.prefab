@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6895009082849698277}
-  - component: {fileID: 6895009082849698278}
+  - component: {fileID: 327023367}
   m_Layer: 0
-  m_Name: Generation Manager
+  m_Name: (Testing) GenerationManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6895009082849698278
+--- !u!114 &327023367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,13 +40,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 6895009082849698279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc8e8266379f514bba63e5adfba0ed9, type: 3}
+  m_Script: {fileID: 11500000, guid: d0c16d46a380eb64d8b1f7641286aa55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layoutSize: {x: 10, y: 10}
-  tileArray:
-  - {fileID: 8377841774208936268, guid: c6bcb9e2d003f1d4a9af297f6138cb5c, type: 3}
-  - {fileID: 8620164391277607439, guid: dd5b94ca62a10d147a6af4c5d732c878, type: 3}
-  - {fileID: 1858274176948663883, guid: 7ba4a41a67245f943a139ce1908d6ac0, type: 3}
-  - {fileID: 8760508559457515355, guid: 162c8c381fc776b4aad1ba6aced32cd0, type: 3}
-  tileSize: {x: 10, y: 10}
+  startingPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rooms:
+  - {fileID: 6611995218513905243, guid: 0904833b63c21fd4da394bbbee4a4250, type: 3}
+  - {fileID: 690274666186398108, guid: 53626bfd2e6be144f874af8c18203540, type: 3}
+  - {fileID: 3604062077742959575, guid: 048613fe4e843434d8b5309ff15a906d, type: 3}
+  - {fileID: 7312315822040344622, guid: be34ed34122713e4c99fe863edf9e5d2, type: 3}
+  roomSize: {x: 10, y: 10}
+  roomMask:
+    serializedVersion: 2
+    m_Bits: 512
+  minimumX: 5
+  maximumX: 95
+  minimumY: 95
+  startTimeBtwRoom: 0.5
