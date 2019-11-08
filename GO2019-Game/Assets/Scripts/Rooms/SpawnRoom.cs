@@ -15,10 +15,8 @@ public class SpawnRoom : MonoBehaviour
     void Update()
     {
         if(levelGeneration.stoppedGeneration){
-            Debug.Log("GENERATION STOPPED");
             Collider[] roomDetector = Physics.OverlapSphere(transform.position, 0.1f, roomMask);
             if(roomDetector != null){
-                Debug.Log("SPAWN NEW OBJECT");
                 int rand = Random.Range(0, levelGeneration.rooms.Length);
                 Instantiate(levelGeneration.rooms[rand], transform.position, Quaternion.identity);
                 Destroy(gameObject);

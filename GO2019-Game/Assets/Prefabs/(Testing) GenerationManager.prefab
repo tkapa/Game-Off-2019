@@ -59,6 +59,9 @@ MonoBehaviour:
   - {fileID: 690274666186398108, guid: 53626bfd2e6be144f874af8c18203540, type: 3}
   - {fileID: 3604062077742959575, guid: 048613fe4e843434d8b5309ff15a906d, type: 3}
   - {fileID: 7312315822040344622, guid: be34ed34122713e4c99fe863edf9e5d2, type: 3}
+  - {fileID: 3432751448841329151, guid: ea966cd3b42a1514790c3aa48679baf9, type: 3}
+  - {fileID: 5303989151200213985, guid: 5e36f6665c2c9a34e9f9d7f2e4875bbb, type: 3}
+  - {fileID: 1441553985183625493, guid: 7f4e769003892da43a32d6ee3a969072, type: 3}
   roomSize: {x: 10, y: 10}
   roomMask:
     serializedVersion: 2
@@ -66,4 +69,5 @@ MonoBehaviour:
   minimumX: 5
   maximumX: 95
   minimumY: 95
+  stoppedGeneration: 0
   startTimeBtwRoom: 0.5
