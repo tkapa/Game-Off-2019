@@ -5,7 +5,18 @@ using UnityEngine;
 public class LevelGeneration : MonoBehaviour
 {
     public Transform[] startingPositions;
-    public GameObject[] rooms; // index 0 LR, index 1 LRD, index 2 LRU, index 3 LRDU
+    /* Room Index
+    0 LR
+    1 LRD
+    2 LRU
+    3 LRDU
+    4 DU
+    5 LDU
+    6 RDU
+    7 UL
+    8 UR
+    */
+    public GameObject[] rooms; 
     public Vector2 roomSize = new Vector2(10, 10); 
     public LayerMask roomMask = 0;
 
