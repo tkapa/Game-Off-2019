@@ -62,6 +62,12 @@ MonoBehaviour:
   - {fileID: 6611995218513905243, guid: 68d05ad2e6d07f54ea075f87c6894430, type: 3}
   - {fileID: 690274666186398108, guid: 07b625933c6b6bc49835a8568a5be0dd, type: 3}
   - {fileID: 690274666186398108, guid: 1733c575a4f970f4a94b72476d3fd7ee, type: 3}
+  - {fileID: 5303989151200213985, guid: 5e36f6665c2c9a34e9f9d7f2e4875bbb, type: 3}
+  - {fileID: 1441553985183625493, guid: 7f4e769003892da43a32d6ee3a969072, type: 3}
+  spawnRoom: {fileID: 5587975939942737329, guid: 3ffb13f07ff9ca7479841b63edb666bf,
+    type: 3}
+  finalRoom: {fileID: 5278117007972775514, guid: 3bd673b4b3aaa7b4c8669b0a2f5df5a8,
+    type: 3}
   roomSize: {x: 10, y: 10}
   roomMask:
     serializedVersion: 2
