@@ -56,6 +56,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);       
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);  
     }
 }
