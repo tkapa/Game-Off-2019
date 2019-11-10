@@ -14,12 +14,6 @@ public class GenerationManager : MonoBehaviour
         GenerateMap();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     void GenerateMap(){
         for(int x = 0; x < layoutSize.x; x++){
             for(int y = 0; y<layoutSize.y; y++){
