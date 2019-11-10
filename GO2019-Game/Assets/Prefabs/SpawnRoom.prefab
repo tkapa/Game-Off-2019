@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 9
+  tileLocked: 0
 --- !u!1 &6109016113494913352
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,5 +152,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d599ef2dc6192ff44977a5e25dabd0ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4247538932449569440, guid: 537640f4692615d4989d2181a6dabd52,
+  playerPrefab: {fileID: 4247538932449569440, guid: a5b339759b7a5ee4a883ff319b7a94c8,
     type: 3}

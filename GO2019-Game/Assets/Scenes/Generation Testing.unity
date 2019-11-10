@@ -5149,10 +5149,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327023367, guid: ddbb07c8293826649928ec5a46f1e68f, type: 3}
-      propertyPath: rooms.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 327023367, guid: ddbb07c8293826649928ec5a46f1e68f, type: 3}
       propertyPath: startingPositions.Array.data[0]
       value: 
       objectReference: {fileID: 1198866396}
@@ -5192,15 +5188,5 @@ PrefabInstance:
       propertyPath: startingPositions.Array.data[9]
       value: 
       objectReference: {fileID: 1525856853}
-    - target: {fileID: 327023367, guid: ddbb07c8293826649928ec5a46f1e68f, type: 3}
-      propertyPath: rooms.Array.data[9]
-      value: 
-      objectReference: {fileID: 1441553985183625493, guid: 3d10075d1e9013d46bb9a5d2c3c12576,
-        type: 3}
-    - target: {fileID: 327023367, guid: ddbb07c8293826649928ec5a46f1e68f, type: 3}
-      propertyPath: rooms.Array.data[10]
-      value: 
-      objectReference: {fileID: 1441553985183625493, guid: c0554b342f4537246a2e0094b142c0dd,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddbb07c8293826649928ec5a46f1e68f, type: 3}
