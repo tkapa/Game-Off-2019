@@ -22,7 +22,7 @@ public class RoomSwapping : MonoBehaviour
 
         if(player != null){
             float playerDist = Vector3.Distance(transform.position, player.transform.position);
-            if(playerDist > 20 || playerDist < 10){
+            if(playerDist > 20 || playerDist < 7){
                 canSwap = false;
             }
         }    

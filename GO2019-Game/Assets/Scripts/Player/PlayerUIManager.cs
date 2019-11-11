@@ -10,7 +10,6 @@ public class PlayerUIManager : MonoBehaviour
     public Slider playerHealthBar;
     public float playerHealth;
     public float playerHealthMax;
-    public float playerHealthMin;
 
     public GameObject playerCamera;
 
@@ -18,7 +17,7 @@ public class PlayerUIManager : MonoBehaviour
     void Start()
     {
         playerHealthBar.maxValue = playerHealthMax;
-        playerHealthBar.minValue = playerHealthMin;
+        playerHealthBar.minValue = 0;
         playerHealth = playerHealthMax;
         playerHealthBar.value = playerHealth;
     }
@@ -39,31 +38,33 @@ public class PlayerUIManager : MonoBehaviour
         playerHealth -= damage;
         playerHealthBar.value = playerHealth;
         StartCoroutine(ScreenShakeing(0.1f, 0.05f));
+
         if(playerHealth <= 0)
         {
+            //Enter End Game State Here
             Destroy(gameObject);
         }
     }
 
     IEnumerator ScreenShakeing(float duration, float magnitude)
     {
-    Vector3 originalCamPos = Camera.main.transform.localPosition;
+        Vector3 originalCamPos = Camera.main.transform.localPosition;
 
-    float elapsed = 0.0f;    
-    
-    while (elapsed < duration) 
-    { 
-        float x = Random.Range(-1f, 1f) * magnitude;
-        float y = Random.Range(-1f, 1f) * magnitude;
+        float elapsed = 0.0f;    
         
-        Camera.main.transform.localPosition = new Vector3(x, y, originalCamPos.z);
-
-        elapsed += Time.deltaTime;
+        while (elapsed < duration) 
+        { 
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
             
-        yield return null;
-    }
-    
-    Camera.main.transform.localPosition = originalCamPos;
+            Camera.main.transform.localPosition = new Vector3(x, y, originalCamPos.z);
+
+            elapsed += Time.deltaTime;
+                
+            yield return null;
+        }
+        
+        Camera.main.transform.localPosition = originalCamPos;
     
     }
 }
