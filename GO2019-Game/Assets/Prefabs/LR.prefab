@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 7891476846439107530}
   - component: {fileID: 7993155589027468763}
   - component: {fileID: 5936555022929418122}
+  - component: {fileID: 8896170007570849651}
   m_Layer: 9
   m_Name: LR
   m_TagString: Untagged
@@ -293,3 +294,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+--- !u!114 &8896170007570849651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611995218513905243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5baf1c90d18134e926712e8d05cf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileLocked: 0

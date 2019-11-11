@@ -9,23 +9,37 @@ public class RoomSwapping : MonoBehaviour
     private GameObject player;
     private LevelGeneration levelGeneration;
 
+    private bool canSwap = false;
+
     private void Start() {
         levelGeneration = FindObjectOfType<LevelGeneration>();
     }
 
-    private void Update() {
+    private void Update() {   
         if(player == null && FindObjectOfType<PlayerMovement>()){
             player = FindObjectOfType<PlayerMovement>().gameObject;
-            Debug.Log("Found Player");
         }
+
+        if(player != null){
+            float playerDist = Vector3.Distance(transform.position, player.transform.position);
+            if(playerDist > 20 || playerDist < 10){
+                canSwap = false;
+            }
+        }    
+    }
+
+    private void OnBecameVisible() {
+        canSwap = true;
     }
 
     private void OnBecameInvisible() {
-        if(!tileLocked){
+        Debug.Log("Swapping Room");
+        if(!tileLocked && canSwap){
             var rand = Random.Range(0, levelGeneration.rooms.Length);
-            GameObject newRoom = (GameObject)Instantiate(levelGeneration.rooms[rand], transform.position, Quaternion.identity);
+            GameObject newRoom = (GameObject)Instantiate(levelGeneration.rooms[rand], transform.position, Quaternion.identity); 
 
-            Destroy(gameObject);
+            newRoom.GetComponent<RoomSwapping>().canSwap = false;
+            Destroy(this.gameObject);
         }
     }
 }

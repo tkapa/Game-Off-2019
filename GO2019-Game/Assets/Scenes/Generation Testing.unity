@@ -261,6 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 19867759}
   - component: {fileID: 19867760}
+  - component: {fileID: 19867762}
   m_Layer: 0
   m_Name: Spawn Point (3)
   m_TagString: Untagged
@@ -294,6 +295,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &19867762
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19867758}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &27533619
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +724,6 @@ GameObject:
   m_Component:
   - component: {fileID: 258499587}
   - component: {fileID: 258499589}
-  - component: {fileID: 258499588}
   m_Layer: 0
   m_Name: Spawn Point (4)
   m_TagString: Untagged
@@ -707,18 +745,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &258499588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258499586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &258499589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +979,6 @@ GameObject:
   m_Component:
   - component: {fileID: 341495357}
   - component: {fileID: 341495359}
-  - component: {fileID: 341495358}
   m_Layer: 0
   m_Name: Spawn Point (2)
   m_TagString: Untagged
@@ -975,18 +1000,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &341495358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341495356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &341495359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,6 +1280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459990284}
   - component: {fileID: 459990285}
+  - component: {fileID: 459990287}
   m_Layer: 0
   m_Name: Spawn Point (6)
   m_TagString: Untagged
@@ -1300,6 +1314,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &459990287
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459990283}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &473876854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1700,6 @@ GameObject:
   m_Component:
   - component: {fileID: 594415582}
   - component: {fileID: 594415584}
-  - component: {fileID: 594415583}
   m_Layer: 0
   m_Name: Spawn Point (1)
   m_TagString: Untagged
@@ -1670,18 +1721,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &594415583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594415581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &594415584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,7 +2124,6 @@ GameObject:
   m_Component:
   - component: {fileID: 773297077}
   - component: {fileID: 773297079}
-  - component: {fileID: 773297078}
   m_Layer: 0
   m_Name: Spawn Point (6)
   m_TagString: Untagged
@@ -2107,18 +2145,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &773297078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773297076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &773297079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,6 +2210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 809375004}
   - component: {fileID: 809375005}
+  - component: {fileID: 809375007}
   m_Layer: 0
   m_Name: Spawn Point (7)
   m_TagString: Untagged
@@ -2217,6 +2244,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &809375007
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809375003}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &833017688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,6 +2335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 850714340}
   - component: {fileID: 850714341}
+  - component: {fileID: 850714343}
   m_Layer: 0
   m_Name: Spawn Point (8)
   m_TagString: Untagged
@@ -2303,6 +2369,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &850714343
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850714339}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &863761282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,6 +2546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978873135}
   - component: {fileID: 978873136}
+  - component: {fileID: 978873138}
   m_Layer: 0
   m_Name: Spawn Point (2)
   m_TagString: Untagged
@@ -2475,6 +2580,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &978873138
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978873134}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &979909821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,7 +3095,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1136977413}
   - component: {fileID: 1136977415}
-  - component: {fileID: 1136977414}
   m_Layer: 0
   m_Name: Spawn Point (3)
   m_TagString: Untagged
@@ -2974,18 +3116,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1136977414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136977412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1136977415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3266,7 +3396,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1274489997}
   - component: {fileID: 1274489999}
-  - component: {fileID: 1274489998}
   m_Layer: 0
   m_Name: Spawn Point (9)
   m_TagString: Untagged
@@ -3288,18 +3417,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1274489998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274489996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1274489999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3494,7 +3611,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1320975001}
   - component: {fileID: 1320975003}
-  - component: {fileID: 1320975002}
   m_Layer: 0
   m_Name: Spawn Point
   m_TagString: Untagged
@@ -3516,18 +3632,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1320975002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320975000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1320975003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3719,7 +3823,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1389992022}
   - component: {fileID: 1389992024}
-  - component: {fileID: 1389992023}
   m_Layer: 0
   m_Name: Spawn Point (5)
   m_TagString: Untagged
@@ -3741,18 +3844,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1389992023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389992021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1389992024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3818,6 +3909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1508185245}
   - component: {fileID: 1508185246}
+  - component: {fileID: 1508185248}
   m_Layer: 0
   m_Name: Spawn Point
   m_TagString: Untagged
@@ -3851,6 +3943,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &1508185248
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508185244}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1525856852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3947,6 +4077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536682239}
   - component: {fileID: 1536682240}
+  - component: {fileID: 1536682242}
   m_Layer: 0
   m_Name: Spawn Point (5)
   m_TagString: Untagged
@@ -3980,6 +4111,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &1536682242
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536682238}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1546509224
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,7 +4417,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1603785327}
   - component: {fileID: 1603785329}
-  - component: {fileID: 1603785328}
   m_Layer: 0
   m_Name: Spawn Point (7)
   m_TagString: Untagged
@@ -4270,18 +4438,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1603785328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603785326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1603785329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4734,6 +4890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934496051}
   - component: {fileID: 1934496052}
+  - component: {fileID: 1934496054}
   m_Layer: 0
   m_Name: Spawn Point (4)
   m_TagString: Untagged
@@ -4767,6 +4924,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &1934496054
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934496050}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1939104774
 GameObject:
   m_ObjectHideFlags: 0
@@ -4820,6 +5015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2014086880}
   - component: {fileID: 2014086881}
+  - component: {fileID: 2014086883}
   m_Layer: 0
   m_Name: Spawn Point (1)
   m_TagString: Untagged
@@ -4853,6 +5049,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &2014086883
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014086879}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &2014425184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4906,6 +5140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2019076932}
   - component: {fileID: 2019076933}
+  - component: {fileID: 2019076935}
   m_Layer: 0
   m_Name: Spawn Point (9)
   m_TagString: Untagged
@@ -4939,6 +5174,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &2019076935
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019076931}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &2021595260
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +5308,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2142568574}
   - component: {fileID: 2142568576}
-  - component: {fileID: 2142568575}
   m_Layer: 0
   m_Name: Spawn Point (8)
   m_TagString: Untagged
@@ -5057,18 +5329,6 @@ Transform:
   m_Father: {fileID: 723058476}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2142568575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142568573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d268e87241b895e41a6a8e63976265fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2142568576
 MonoBehaviour:
   m_ObjectHideFlags: 0

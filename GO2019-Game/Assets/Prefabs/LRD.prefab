@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7598015845958364436}
   - component: {fileID: 8330157621252008139}
   - component: {fileID: 6066486618687709551}
+  - component: {fileID: 7798199265781895410}
   m_Layer: 9
   m_Name: LRD
   m_TagString: Untagged
@@ -108,6 +109,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+--- !u!114 &7798199265781895410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690274666186398108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5baf1c90d18134e926712e8d05cf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileLocked: 0
 --- !u!1 &7381258582302340715
 GameObject:
   m_ObjectHideFlags: 0

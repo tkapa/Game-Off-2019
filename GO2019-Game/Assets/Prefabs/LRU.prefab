@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2251808300880592366}
   - component: {fileID: 7395805611092900380}
   - component: {fileID: 6515258142266843756}
+  - component: {fileID: -8753519673022677353}
   m_Layer: 9
   m_Name: LRU
   m_TagString: Untagged
@@ -108,6 +109,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+--- !u!114 &-8753519673022677353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3604062077742959575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5baf1c90d18134e926712e8d05cf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileLocked: 0
 --- !u!1 &8296803639381940252
 GameObject:
   m_ObjectHideFlags: 0
