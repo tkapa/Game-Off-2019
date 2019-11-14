@@ -14,7 +14,7 @@ public class SpawnRoom : MonoBehaviour
     void Update()
     {
         if(levelGeneration.stoppedGeneration){
-            Collider[] roomDetector = Physics.OverlapSphere(transform.position, 0.1f, LayerMask.GetMask("Ground"));
+            Collider[] roomDetector = Physics.OverlapSphere(transform.position, 1f, LayerMask.GetMask("Ground"));
             if(roomDetector.Length == 0){
                 int rand = Random.Range(0, levelGeneration.rooms.Length);
                 Instantiate(levelGeneration.rooms[rand], transform.position, Quaternion.identity);               

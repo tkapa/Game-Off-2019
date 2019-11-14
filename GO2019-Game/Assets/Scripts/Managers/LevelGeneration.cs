@@ -62,7 +62,7 @@ public class LevelGeneration : MonoBehaviour
             Vector3 newPos = new Vector3(transform.position.x + roomSize.x, 0, transform.position.z);
             transform.position = newPos;
                 
-            int rand = Random.Range(0, rooms.Length);
+            int rand = Random.Range(0, 5);
             Instantiate(rooms[rand], transform.position, Quaternion.identity);
 
             direction = Random.Range(1, 6);
@@ -82,7 +82,7 @@ public class LevelGeneration : MonoBehaviour
             Vector3 newPos = new Vector3(transform.position.x - roomSize.x, 0, transform.position.z);
             transform.position = newPos;
 
-            int rand = Random.Range(0, rooms.Length);
+            int rand = Random.Range(0, 5);
             Instantiate(rooms[rand], transform.position, Quaternion.identity);
 
             direction = Random.Range(3, 6);
@@ -100,6 +100,7 @@ public class LevelGeneration : MonoBehaviour
             int type = roomDetector[0].GetComponent<RoomType>().type;
 
             if(type != 1 || type != 3 || type != 9){
+                Debug.Log("Wrong Room");
                 roomDetector[0].GetComponent<RoomType>().RoomDestruction();
                     
                 if(downCounter >= 2){
