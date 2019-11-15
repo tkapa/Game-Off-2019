@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class PickupableObject : InteractableObject
 {
+    public bool isPlaceable = false;
+
     public override void ObjectInteraction(Transform handTransform){     
-        StartCoroutine(LerpToHand(handTransform));
-        transform.parent = handTransform.transform;
+        transform.position = handTransform.position;
+        transform.parent = handTransform;
+        transform.rotation = handTransform.rotation;
     }
 
-    public void UseObject(){
+    public virtual void UseObject(){
         Debug.Log(gameObject.name + " Used");
         Destroy(gameObject);
     }
 
-    IEnumerator LerpToHand(Transform handTransform){
+    public virtual void PlaceObject(Vector3 placePosition){
+        transform.parent = null;
+        transform.position = placePosition;
+    }
 
-        while(transform.position != handTransform.position){
-            Vector3 newPos = Vector3.Lerp(transform.position, handTransform.position, Time.deltaTime * 10);
+    /*
+    IEnumerator LerpToPosition(Vector3 newPosition){
+
+        while(transform.position != newPosition){
+            Vector3 newPos = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * 10);
             transform.position = newPos;
             yield return null;
         }
-    }
+    }*/
 }

@@ -9,7 +9,7 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private float pickupDistance = 5f;
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Transform handTransform;
-
+    [SerializeField] private LayerMask groundMask = 9;
     private Material defaultMaterial;
     private Transform currentSelection;
     private bool handFull = false;
@@ -44,7 +44,10 @@ public class SelectionManager : MonoBehaviour
                 selection.GetComponent<PickupableObject>().ObjectInteraction(handTransform);
                 handFull = true;
             } else if(handFull){
-                Debug.Log("Already holding object");
+                PickupableObject item = handTransform.GetComponentInChildren<PickupableObject>();
+                item.PlaceObject(selection.position);
+                selection.GetComponent<PickupableObject>().ObjectInteraction(handTransform);
+                handFull = true;
             }else {
                 selection.GetComponent<InteractableObject>().ObjectInteraction();
             }
@@ -52,6 +55,7 @@ public class SelectionManager : MonoBehaviour
     }
 
     void HighlightObject(){
+
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, pickupDistance, pickupMask)){
@@ -65,8 +69,17 @@ public class SelectionManager : MonoBehaviour
     }
 
     void UseObject(){
-        if(handTransform.GetComponentInChildren<PickupableObject>()){
-            handTransform.GetComponentInChildren<PickupableObject>().UseObject();
+        PickupableObject item = handTransform.GetComponentInChildren<PickupableObject>();
+
+        if(item.isPlaceable){
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit, pickupDistance, groundMask)){
+                item.PlaceObject(new Vector3(hit.point.x, hit.point.y + 0.2f, hit.point.z));       
+                handFull = false;     
+            }            
+        } else{
+            item.UseObject();
             handFull = false;
         }
     }
