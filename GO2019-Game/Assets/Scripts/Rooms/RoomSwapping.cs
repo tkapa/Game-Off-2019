@@ -35,8 +35,8 @@ public class RoomSwapping : MonoBehaviour
     private void OnBecameInvisible() {
         Debug.Log("Swapping Room");
         if(!tileLocked && canSwap){
-            var rand = Random.Range(0, levelGeneration.rooms.Length);
-            GameObject newRoom = (GameObject)Instantiate(levelGeneration.rooms[rand], transform.position, Quaternion.identity); 
+            var rand = Random.Range(0, LevelGeneration.rooms.Length);
+            GameObject newRoom = (GameObject)Instantiate(LevelGeneration.rooms[rand], transform.position, Quaternion.identity); 
 
             newRoom.GetComponent<RoomSwapping>().canSwap = false;
             Destroy(this.gameObject);
