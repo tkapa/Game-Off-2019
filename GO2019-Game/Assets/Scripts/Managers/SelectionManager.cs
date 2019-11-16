@@ -10,6 +10,7 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Transform handTransform;
     [SerializeField] private LayerMask groundMask = 9;
+    // [SerializeField] private Camera playerCamera;
     private Material defaultMaterial;
     private Transform currentSelection;
     private bool handFull = false;
@@ -38,12 +39,13 @@ public class SelectionManager : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, pickupDistance, pickupMask)){
+            Debug.Log("Raycast hit");
             var selection = hit.transform;
 
             if(selection.GetComponent<PickupableObject>() && !handFull){
                 selection.GetComponent<PickupableObject>().ObjectInteraction(handTransform);
                 handFull = true;
-            } else if(handFull){
+            } else if(handFull){                
                 PickupableObject item = handTransform.GetComponentInChildren<PickupableObject>();
                 item.PlaceObject(selection.position);
                 selection.GetComponent<PickupableObject>().ObjectInteraction(handTransform);
@@ -75,7 +77,7 @@ public class SelectionManager : MonoBehaviour
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit, pickupDistance, groundMask)){
-                item.PlaceObject(new Vector3(hit.point.x, hit.point.y + 0.2f, hit.point.z));       
+                item.PlaceObject(new Vector3(hit.point.x, hit.point.y, hit.point.z));       
                 handFull = false;     
             }            
         } else{

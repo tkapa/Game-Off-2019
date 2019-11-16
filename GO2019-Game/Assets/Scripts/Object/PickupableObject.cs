@@ -20,6 +20,7 @@ public class PickupableObject : InteractableObject
     public virtual void PlaceObject(Vector3 placePosition){
         transform.parent = null;
         transform.position = placePosition;
+        transform.rotation = Quaternion.identity;
     }
 
     /*
