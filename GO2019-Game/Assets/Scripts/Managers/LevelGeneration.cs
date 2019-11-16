@@ -8,7 +8,7 @@ public class LevelGeneration : MonoBehaviour
 
     /*  Room Index
         0 LR 1 LRD 2 LRU 3 LRDU 4 DU 5 LDU 6 RDU 7 UL 8 UR */
-    public static GameObject[] rooms; 
+    public GameObject[] rooms; 
 
     //Room Index 9
     public GameObject spawnRoom;

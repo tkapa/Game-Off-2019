@@ -10,7 +10,8 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Transform handTransform;
     [SerializeField] private LayerMask groundMask = 9;
-    // [SerializeField] private Camera playerCamera;
+    [SerializeField] private Camera playerCamera;
+
     private Material defaultMaterial;
     private Transform currentSelection;
     private bool handFull = false;
@@ -35,10 +36,9 @@ public class SelectionManager : MonoBehaviour
     }
 
     void Interact(){
-        
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, pickupDistance, pickupMask)){
+        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, pickupDistance, pickupMask)){
             Debug.Log("Raycast hit");
             var selection = hit.transform;
 
@@ -58,9 +58,8 @@ public class SelectionManager : MonoBehaviour
 
     void HighlightObject(){
 
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, pickupDistance, pickupMask)){
+        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, pickupDistance, pickupMask)){
             var selection = hit.transform;
             var selectionRenderer = selection.GetComponent<Renderer>();
             if(selectionRenderer != null){
@@ -74,9 +73,9 @@ public class SelectionManager : MonoBehaviour
         PickupableObject item = handTransform.GetComponentInChildren<PickupableObject>();
 
         if(item.isPlaceable){
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
             RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, pickupDistance, groundMask)){
+            if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, pickupDistance, pickupMask)){
                 item.PlaceObject(new Vector3(hit.point.x, hit.point.y, hit.point.z));       
                 handFull = false;     
             }            

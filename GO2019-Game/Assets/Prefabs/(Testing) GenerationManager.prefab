@@ -77,5 +77,4 @@ MonoBehaviour:
   minimumX: 5
   maximumX: 95
   minimumY: 95
-  stoppedGeneration: 0
   startTimeBtwRoom: 0.005
