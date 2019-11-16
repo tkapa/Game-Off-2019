@@ -11,6 +11,18 @@ public class PlayerUIManager : MonoBehaviour
     public float playerHealth;
     public float playerHealthMax;
 
+    [Header("Stamina Bar")]
+    public Slider playerStamBar;
+    public float playerStamina;
+    public float playerStamMax;
+    public float staminaLossRate;
+    public float staminaGainRate;
+
+    [Header("Sound Controller")]
+    [SerializeField] float soundFloat;
+    public Slider soundSlider;
+
+    [Header("Camera Shake")]
     public GameObject playerCamera;
 
     // Start is called before the first frame update
@@ -20,12 +32,12 @@ public class PlayerUIManager : MonoBehaviour
         playerHealthBar.minValue = 0;
         playerHealth = playerHealthMax;
         playerHealthBar.value = playerHealth;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {   
-        
+        playerStamBar.maxValue = playerStamMax;
+        playerStamBar.minValue = 0;
+        playerStamina = playerStamMax;
+        playerStamBar.value = playerHealth;
+        soundSlider.value = 1f;
+        SoundController();
     }
 
     public void TakeHealing(float healing)
@@ -44,6 +56,28 @@ public class PlayerUIManager : MonoBehaviour
             //Enter End Game State Here
             Destroy(gameObject);
         }
+    }
+
+    public void LoseStamina()
+    {
+        playerStamina -= (20 * staminaLossRate) * Time.deltaTime;
+        playerStamBar.value = playerStamina;
+    }
+
+    public void GainStamina()
+    {
+        if(playerStamina < playerStamMax)
+        {
+            playerStamina += (20 * staminaGainRate) * Time.deltaTime;
+            playerStamBar.value = playerStamina;
+        }                
+    }
+
+    public void SoundController()
+    {
+        soundFloat = soundSlider.value;
+        AudioListener.volume = soundFloat;
+        Debug.Log(AudioListener.volume);
     }
 
     IEnumerator ScreenShakeing(float duration, float magnitude)

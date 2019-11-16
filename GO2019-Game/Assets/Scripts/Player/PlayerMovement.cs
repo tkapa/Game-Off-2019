@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode sprintInput = KeyCode.LeftShift;
 
     CharacterController controller;
+    PlayerUIManager playerUIManager;
     Vector3 velocity;
 
     bool isGrounded;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start() {
         controller = GetComponent<CharacterController>();
+        playerUIManager = GetComponent<PlayerUIManager>();
     }
 
     private void Update() {
@@ -39,10 +41,13 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         
-        if(isSprinting){
+        if(isSprinting && playerUIManager.playerStamina > 0){
             controller.Move(move * sprintSpeed * Time.deltaTime);
+            playerUIManager.LoseStamina();
         } else {
             controller.Move(move * speed * Time.deltaTime);
+            playerUIManager.GainStamina();
+            isSprinting = false;
         }
 
         if(isGrounded && velocity.y < 0){
