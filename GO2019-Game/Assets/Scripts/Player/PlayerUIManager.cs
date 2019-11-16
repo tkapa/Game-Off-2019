@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerUIManager : MonoBehaviour
 {
+    GameManager gameManager;
 
     [Header("Health Bar")]
     public Slider playerHealthBar;
@@ -18,9 +19,9 @@ public class PlayerUIManager : MonoBehaviour
     public float staminaLossRate;
     public float staminaGainRate;
 
-    [Header("Sound Controller")]
-    [SerializeField] float soundFloat;
+    [Header("Options")]    
     public Slider soundSlider;
+    public Toggle invertYToggle;
 
     [Header("Camera Shake")]
     public GameObject playerCamera;
@@ -28,6 +29,7 @@ public class PlayerUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         playerHealthBar.maxValue = playerHealthMax;
         playerHealthBar.minValue = 0;
         playerHealth = playerHealthMax;
@@ -36,7 +38,8 @@ public class PlayerUIManager : MonoBehaviour
         playerStamBar.minValue = 0;
         playerStamina = playerStamMax;
         playerStamBar.value = playerHealth;
-        soundSlider.value = 1f;
+        soundSlider.value = gameManager.soundFloat;
+        invertYToggle.isOn = gameManager.invertedY;
         SoundController();
     }
 
@@ -75,9 +78,13 @@ public class PlayerUIManager : MonoBehaviour
 
     public void SoundController()
     {
-        soundFloat = soundSlider.value;
-        AudioListener.volume = soundFloat;
+        gameManager.soundFloat = soundSlider.value;
+        AudioListener.volume = gameManager.soundFloat;
         Debug.Log(AudioListener.volume);
+    }
+
+    public void ToggleInvertedY(){
+        gameManager.invertedY = invertYToggle.isOn;
     }
 
     IEnumerator ScreenShakeing(float duration, float magnitude)
