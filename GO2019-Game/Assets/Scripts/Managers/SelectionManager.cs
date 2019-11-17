@@ -52,10 +52,9 @@ public class SelectionManager : MonoBehaviour
             if(selection.GetComponent<PickupableObject>() && !handFull){
                 selection.GetComponent<PickupableObject>().ObjectInteraction(handTransform);
                 handFull = true;
-            } else if(handFull){                
+            } else if(handFull && selection.GetComponent<PickupableObject>()){                
                 PickupableObject item = handTransform.GetComponentInChildren<PickupableObject>();
-                item.PlaceObject(selection.position); 
-                Debug.Log("Here");               
+                item.PlaceObject(selection.position);                
                 selection.GetComponent<PickupableObject>().ObjectInteraction(handTransform);
                 handFull = true;
             }else {
@@ -83,7 +82,7 @@ public class SelectionManager : MonoBehaviour
         if(item.isPlaceable){
 
             RaycastHit hit;
-            if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, pickupDistance, pickupMask)){
+            if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, pickupDistance, groundMask)){
                 item.PlaceObject(new Vector3(hit.point.x, hit.point.y, hit.point.z));       
                 handFull = false;     
                 Debug.Log("Here");
