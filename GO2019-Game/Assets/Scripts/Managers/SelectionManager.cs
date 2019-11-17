@@ -54,7 +54,8 @@ public class SelectionManager : MonoBehaviour
                 handFull = true;
             } else if(handFull){                
                 PickupableObject item = handTransform.GetComponentInChildren<PickupableObject>();
-                item.PlaceObject(selection.position);
+                item.PlaceObject(selection.position); 
+                Debug.Log("Here");               
                 selection.GetComponent<PickupableObject>().ObjectInteraction(handTransform);
                 handFull = true;
             }else {
@@ -85,6 +86,7 @@ public class SelectionManager : MonoBehaviour
             if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, pickupDistance, pickupMask)){
                 item.PlaceObject(new Vector3(hit.point.x, hit.point.y, hit.point.z));       
                 handFull = false;     
+                Debug.Log("Here");
             }            
         } else{
             item.UseObject();
