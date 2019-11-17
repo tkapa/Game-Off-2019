@@ -24,6 +24,11 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("Testing Scene");
     }
 
+    public void GenerationTesting()
+    {
+        SceneManager.LoadScene("Generation Testing");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
