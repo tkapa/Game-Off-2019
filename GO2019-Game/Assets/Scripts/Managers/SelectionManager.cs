@@ -16,6 +16,13 @@ public class SelectionManager : MonoBehaviour
     private Transform currentSelection;
     private bool handFull = false;
 
+    PlayerUIManager playerUIManager;
+
+    void Start()
+    {
+        playerUIManager = GetComponent<PlayerUIManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -81,6 +88,15 @@ public class SelectionManager : MonoBehaviour
             }            
         } else{
             item.UseObject();
+            if(item.tag == "Healing Potion")
+            {   
+                playerUIManager.TakeHealing(item.potionHealing);
+                Debug.Log("Healing");
+            }
+            if(item.tag == "Stamina Potion")
+            {   
+                playerUIManager.ReceiveStamina(item.potionStamina);
+            }
             handFull = false;
         }
     }

@@ -6,6 +6,9 @@ public class PickupableObject : InteractableObject
 {
     public bool isPlaceable = false;
 
+    public float potionHealing;
+    public float potionStamina;
+
     public override void ObjectInteraction(Transform handTransform){     
         transform.position = handTransform.position;
         transform.parent = handTransform;

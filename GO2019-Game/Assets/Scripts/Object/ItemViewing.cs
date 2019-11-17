@@ -6,8 +6,8 @@ public class ItemViewing : MonoBehaviour
 {
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
+        transform.LookAt(new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x, transform.position.y, GameObject.FindGameObjectWithTag("Player").transform.position.z));
     }
 }

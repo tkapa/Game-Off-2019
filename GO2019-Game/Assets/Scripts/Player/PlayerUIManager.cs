@@ -46,6 +46,7 @@ public class PlayerUIManager : MonoBehaviour
     public void TakeHealing(float healing)
     {
         playerHealth += healing;
+        playerHealthBar.value = playerHealth;
     }
 
     public void TakeDamage(float damage)
@@ -74,6 +75,12 @@ public class PlayerUIManager : MonoBehaviour
             playerStamina += (20 * staminaGainRate) * Time.deltaTime;
             playerStamBar.value = playerStamina;
         }                
+    }
+
+    public void ReceiveStamina(float received)
+    {
+        playerStamina += received;
+        playerStamBar.value = playerStamina;
     }
 
     public void SoundController()
