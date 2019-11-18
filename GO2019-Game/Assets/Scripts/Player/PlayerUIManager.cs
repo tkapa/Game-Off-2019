@@ -87,7 +87,6 @@ public class PlayerUIManager : MonoBehaviour
     {
         gameManager.soundFloat = soundSlider.value;
         AudioListener.volume = gameManager.soundFloat;
-        Debug.Log(AudioListener.volume);
     }
 
     public void ToggleInvertedY(){
