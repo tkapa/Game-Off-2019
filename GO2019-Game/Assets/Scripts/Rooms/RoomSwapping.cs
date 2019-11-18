@@ -10,6 +10,10 @@ public class RoomSwapping : MonoBehaviour
     LevelGeneration levelGeneration;
 
     private bool canSwap = false;
+    private bool playerSeen = false;
+
+    private float swapBufferTime = 0.5f;
+    private float swapBufferTimer = 0f;
 
     private void Start() {
         levelGeneration = FindObjectOfType<LevelGeneration>();
@@ -25,21 +29,29 @@ public class RoomSwapping : MonoBehaviour
             if(playerDist > 20 || playerDist < 7){
                 canSwap = false;
             }
-        }    
+        }  
+        
+        if(canSwap){
+            swapBufferTimer += Time.deltaTime;
+        } else if(!canSwap){
+            swapBufferTimer = 0f;
+        }
+
+        if(!tileLocked && playerSeen && swapBufferTimer >= swapBufferTime){
+                var rand = Random.Range(0, levelGeneration.rooms.Length);
+                GameObject newRoom = (GameObject)Instantiate(levelGeneration.rooms[rand], transform.position, Quaternion.identity); 
+
+                newRoom.GetComponent<RoomSwapping>().canSwap = false;
+                Destroy(this.gameObject);
+            }  
     }
 
     private void OnBecameVisible() {
-        canSwap = true;
+        playerSeen = true;
+        canSwap = false;
     }
 
     private void OnBecameInvisible() {
-        Debug.Log("Swapping Room");
-        if(!tileLocked && canSwap){
-            var rand = Random.Range(0, levelGeneration.rooms.Length);
-            GameObject newRoom = (GameObject)Instantiate(levelGeneration.rooms[rand], transform.position, Quaternion.identity); 
-
-            newRoom.GetComponent<RoomSwapping>().canSwap = false;
-            Destroy(this.gameObject);
-        }
+        canSwap = true;
     }
 }

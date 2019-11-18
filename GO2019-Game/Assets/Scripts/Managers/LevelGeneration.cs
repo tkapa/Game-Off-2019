@@ -100,7 +100,6 @@ public class LevelGeneration : MonoBehaviour
             int type = roomDetector[0].GetComponent<RoomType>().type;
 
             if(type != 1 || type != 3 || type != 9){
-                Debug.Log("Wrong Room");
                 roomDetector[0].GetComponent<RoomType>().RoomDestruction();
                     
                 if(downCounter >= 2){
