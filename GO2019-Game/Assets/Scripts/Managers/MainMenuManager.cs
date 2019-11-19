@@ -20,6 +20,7 @@ public class MainMenuManager : MonoBehaviour
     public void Start() 
     {
         soundSlider.value = GameManager.soundFloat;
+        sensitivitySlider.value = GameManager.mouseSensitivity;
         invertYToggle.isOn = GameManager.invertedY;
     }
 
