@@ -18,11 +18,7 @@ public class PlayerUIManager : MonoBehaviour
     public float playerStamMax;
     public float staminaLossRate;
     public float staminaGainRate;
-
-    [Header("Options")]    
-    public Slider soundSlider;
-    public Toggle invertYToggle;
-
+   
     [Header("Camera Shake")]
     public GameObject playerCamera;
 
@@ -38,9 +34,6 @@ public class PlayerUIManager : MonoBehaviour
         playerStamBar.minValue = 0;
         playerStamina = playerStamMax;
         playerStamBar.value = playerHealth;
-        soundSlider.value = gameManager.soundFloat;
-        invertYToggle.isOn = gameManager.invertedY;
-        SoundController();
     }
 
     public void TakeHealing(float healing)
@@ -83,15 +76,7 @@ public class PlayerUIManager : MonoBehaviour
         playerStamBar.value = playerStamina;
     }
 
-    public void SoundController()
-    {
-        gameManager.soundFloat = soundSlider.value;
-        AudioListener.volume = gameManager.soundFloat;
-    }
-
-    public void ToggleInvertedY(){
-        gameManager.invertedY = invertYToggle.isOn;
-    }
+    
 
     IEnumerator ScreenShakeing(float duration, float magnitude)
     {

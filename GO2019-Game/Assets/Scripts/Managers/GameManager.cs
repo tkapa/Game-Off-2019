@@ -5,18 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public float soundFloat;
-    public bool invertedY;
+    public static float soundFloat;
+    public static bool invertedY;
+    public static float mouseSensitivity;
+
+    private static GameManager gameManagerInstance;
+    
+    void Awake(){
+        DontDestroyOnLoad (this);
+            
+        if (gameManagerInstance == null) {
+            gameManagerInstance = this;
+        } else {
+            Destroy(this);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         DefaultSettings();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -24,5 +32,6 @@ public class GameManager : MonoBehaviour
     {
         soundFloat = 1f;
         invertedY = false;
+        mouseSensitivity = 1f;
     }
 }

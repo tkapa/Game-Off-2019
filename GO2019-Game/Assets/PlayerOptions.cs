@@ -1,40 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenuManager : MonoBehaviour
+public class PlayerOptions : MonoBehaviour
 {
-
-    [Header("Options")]
+    [Header("Options")]    
     public Slider soundSlider;
     public Toggle invertYToggle;
     public Slider sensitivitySlider;
 
-    public void Start() 
-    {
+    // Start is called before the first frame update
+    void Start()
+    {   
         soundSlider.value = GameManager.soundFloat;
         invertYToggle.isOn = GameManager.invertedY;
-    }
-
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Testing Scene");
-    }
-
-    public void GenerationTesting()
-    {
-        SceneManager.LoadScene("Generation Testing");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+        SoundController();        
     }
 
     public void SoundController()
-    {        
+    {
         GameManager.soundFloat = soundSlider.value;
         AudioListener.volume = GameManager.soundFloat;
     }
