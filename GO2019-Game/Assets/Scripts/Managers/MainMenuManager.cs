@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject menuUI;
+
+    [SerializeField]
+    private GameObject optionsUI;
 
     [Header("Options")]
     public Slider soundSlider;
@@ -26,6 +31,11 @@ public class MainMenuManager : MonoBehaviour
     public void GenerationTesting()
     {
         SceneManager.LoadScene("Generation Testing");
+    }
+
+    public void OptionsMenu(){
+        menuUI.SetActive(!menuUI.activeSelf);
+        optionsUI.SetActive(!optionsUI.activeSelf);
     }
 
     public void QuitGame()
