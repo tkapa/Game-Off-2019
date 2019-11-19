@@ -14,10 +14,10 @@ public class GameManager : MonoBehaviour
     void Awake(){
         DontDestroyOnLoad (this);
             
-        if (gameManagerInstance == null) {
+        if (GameManager.gameManagerInstance == null) {
             gameManagerInstance = this;
         } else {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
