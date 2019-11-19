@@ -12,6 +12,9 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     private GameObject optionsUI;
 
+    [SerializeField]
+    private GameObject creditsUI;
+
     [Header("Options")]
     public Slider soundSlider;
     public Toggle invertYToggle;
@@ -56,5 +59,11 @@ public class MainMenuManager : MonoBehaviour
 
     public void SensitivityController(){
         GameManager.mouseSensitivity = sensitivitySlider.value;
+    }
+
+    public void CreditsMenu()
+    {
+        menuUI.SetActive(!menuUI.activeSelf);
+        creditsUI.SetActive(!creditsUI.activeSelf);
     }
 }
