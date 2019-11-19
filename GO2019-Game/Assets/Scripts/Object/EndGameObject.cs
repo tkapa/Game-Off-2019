@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGameObject : InteractableObject
 {
     public override void ObjectInteraction(){
-        Debug.Log("Ended the game");        
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Menu");   
     }
 }
