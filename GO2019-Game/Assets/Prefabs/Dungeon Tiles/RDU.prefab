@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 6441947257004786781}
   - component: {fileID: 1353347342391607563}
   - component: {fileID: 4202859723387327965}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}

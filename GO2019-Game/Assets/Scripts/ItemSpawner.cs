@@ -7,7 +7,7 @@ public class ItemSpawner : MonoBehaviour
 
 [SerializeField]
 GameObject[] consumables;
-
+public GameObject chosenItem;
 [SerializeField]
 private GameObject spawnerLocation;
 
@@ -19,6 +19,9 @@ private GameObject spawnerLocation;
 
     void SpawnItem()
     {
-        Instantiate(consumables[Random.Range(0, consumables.Length)], spawnerLocation.transform.position, spawnerLocation.transform.rotation);
+        GameObject item = (GameObject)Instantiate(consumables[Random.Range(0, consumables.Length)], spawnerLocation.transform.position, spawnerLocation.transform.rotation);
+        
+        item.transform.parent = this.transform;
+        
     }
 }
