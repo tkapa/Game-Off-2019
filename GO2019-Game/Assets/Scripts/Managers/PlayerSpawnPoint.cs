@@ -6,6 +6,10 @@ public class PlayerSpawnPoint : MonoBehaviour
 {
     public GameObject playerPrefab;
 
+    private void Start() {
+        transform.parent = null;
+    }
+
     // Update is called once per frame
     void Update()
     {

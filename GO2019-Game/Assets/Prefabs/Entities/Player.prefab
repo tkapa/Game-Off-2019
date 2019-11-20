@@ -84,7 +84,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5746438293801671841}
+      - m_Target: {fileID: 0}
         m_MethodName: ToggleInvertedY
         m_Mode: 1
         m_Arguments:
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5746438293801671841}
+      - m_Target: {fileID: 0}
         m_MethodName: SoundController
         m_Mode: 1
         m_Arguments:
@@ -1762,7 +1762,6 @@ GameObject:
   - component: {fileID: 4247538932449569445}
   - component: {fileID: 4247538932449569444}
   - component: {fileID: 1174248177221304636}
-  - component: {fileID: 5746438293801671841}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1871,21 +1870,6 @@ MonoBehaviour:
   staminaLossRate: 2
   staminaGainRate: 1
   playerCamera: {fileID: 4247538932809872910}
---- !u!114 &5746438293801671841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4247538932449569440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8fb413daee46945a8abc4a3a9f19fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundSlider: {fileID: 5934448031337404270}
-  invertYToggle: {fileID: 130364212}
-  sensitivitySlider: {fileID: 4471885749542438920}
 --- !u!1 &4247538932809872910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,7 +2375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 80}
+  m_AnchoredPosition: {x: 120, y: 101}
   m_SizeDelta: {x: 171.2, y: 57.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6207773002771659220
@@ -2835,6 +2819,7 @@ GameObject:
   - component: {fileID: 1552702387352295259}
   - component: {fileID: 1305879230778692841}
   - component: {fileID: 5884467679359207931}
+  - component: {fileID: 8943253412511513297}
   m_Layer: 5
   m_Name: Game Canvas
   m_TagString: Untagged
@@ -2937,6 +2922,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseUI: {fileID: 1356885663724340002}
   gameUI: {fileID: 7274054414505413786}
+--- !u!114 &8943253412511513297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686219062515461629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8fb413daee46945a8abc4a3a9f19fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSlider: {fileID: 5934448031337404270}
+  invertYToggle: {fileID: 130364212}
+  sensitivitySlider: {fileID: 4471885749542438920}
 --- !u!1 &6865591174150111344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,7 +3393,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5746438293801671841}
+      - m_Target: {fileID: 0}
         m_MethodName: SensitivityController
         m_Mode: 1
         m_Arguments:
