@@ -9,9 +9,10 @@ public class GameManager : MonoBehaviour
     public static bool invertedY;
     public static float mouseSensitivity;
 
-    private static GameManager gameManagerInstance;
+    public static GameManager gameManagerInstance;
     
     void Awake(){
+        
         DontDestroyOnLoad (this);
             
         if (GameManager.gameManagerInstance == null) {
@@ -21,17 +22,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        DefaultSettings();
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     void DefaultSettings()
     {
         soundFloat = 1f;
         invertedY = false;
         mouseSensitivity = 1f;
+    }
+
+    public void SaveGameData(){
+        SaveLoadManager.SaveGameData();
+    }
+
+    public void LoadGameData(){
+        GameData data = SaveLoadManager.LoadGameData();
+
+        if(data == null){
+            DefaultSettings();
+        } else {
+            soundFloat = data.volume;
+            mouseSensitivity = data.sensitivity;
+            invertedY = data.invertYAxis;
+        }
     }
 }

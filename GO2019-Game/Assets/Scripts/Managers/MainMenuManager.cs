@@ -22,6 +22,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void Start() 
     {
+        GameManager.gameManagerInstance.LoadGameData();
         soundSlider.value = GameManager.soundFloat;
         sensitivitySlider.value = GameManager.mouseSensitivity;
         invertYToggle.isOn = GameManager.invertedY;
@@ -42,8 +43,13 @@ public class MainMenuManager : MonoBehaviour
         optionsUI.SetActive(!optionsUI.activeSelf);
     }
 
+    public void SaveOptions(){
+        SaveLoadManager.SaveGameData();
+    }
+
     public void QuitGame()
     {
+        SaveLoadManager.SaveGameData();
         Application.Quit();
     }
 
