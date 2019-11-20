@@ -8,6 +8,7 @@ public class WallViewing : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.LookAt(new Vector3(transform.localPosition.x, GameObject.FindGameObjectWithTag("Player").transform.localPosition.y, transform.localPosition.z));
+
+        gameObject.transform.LookAt(new Vector3(0, GameObject.FindGameObjectWithTag("Player").transform.localPosition.y -5, 0));
     }
 }
