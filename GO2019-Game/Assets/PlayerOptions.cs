@@ -14,8 +14,8 @@ public class PlayerOptions : MonoBehaviour
     void Start()
     {   
         soundSlider.value = GameManager.soundFloat;
-        invertYToggle.isOn = GameManager.invertedY;
-        SoundController();        
+        sensitivitySlider.value = GameManager.mouseSensitivity;
+        invertYToggle.isOn = GameManager.invertedY;       
     }
 
     public void SoundController()

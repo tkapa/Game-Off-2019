@@ -5,17 +5,35 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-public class SaveLoadManager : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public static class SaveLoadManager{
+
+    public static void SaveGameData(){
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        string path = Application.persistentDataPath + "/data.sgd";
+        Debug.Log(path);
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        GameData data = new GameData();
+
+        formatter.Serialize(stream, data);
+        stream.Close();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static GameData LoadGameData(){
+        string path = Application.persistentDataPath + "/data.sgd";
+        Debug.Log(path);
+        if(File.Exists(path)){
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            GameData data = formatter.Deserialize(stream) as GameData;
+            stream.Close();
+
+            return data;
+        } else {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
+    }    
 }
