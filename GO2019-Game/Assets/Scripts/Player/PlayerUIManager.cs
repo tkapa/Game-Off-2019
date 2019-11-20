@@ -40,6 +40,8 @@ public class PlayerUIManager : MonoBehaviour
     {
         playerHealth += healing;
         playerHealthBar.value = playerHealth;
+        if(playerHealth > playerHealthMax)
+            playerHealth = playerHealthMax;
     }
 
     public void TakeDamage(float damage)
@@ -74,6 +76,8 @@ public class PlayerUIManager : MonoBehaviour
     {
         playerStamina += received;
         playerStamBar.value = playerStamina;
+        if(playerStamina > playerStamMax)
+            playerStamina = playerStamMax;
     }
 
     
