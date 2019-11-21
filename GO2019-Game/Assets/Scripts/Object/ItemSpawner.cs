@@ -5,11 +5,13 @@ using UnityEngine;
 public class ItemSpawner : MonoBehaviour
 {
 
-[SerializeField]
-GameObject[] consumables;
-public GameObject chosenItem;
-[SerializeField]
-private GameObject spawnerLocation;
+    [SerializeField]
+    GameObject[] consumables = null;
+
+    [SerializeField]
+    private GameObject spawnerLocation = null;
+
+    public GameObject chosenItem = null;    
 
     // Start is called before the first frame update
     void Start()

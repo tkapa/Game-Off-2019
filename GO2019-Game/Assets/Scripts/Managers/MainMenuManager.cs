@@ -7,16 +7,16 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject menuUI;
+    private GameObject menuUI = null;
 
     [SerializeField]
-    private GameObject optionsUI;
+    private GameObject optionsUI = null;
 
     [SerializeField]
-    private GameObject creditsUI;
+    private GameObject creditsUI = null;
 
     [SerializeField]
-    Button[] mmButtons;
+    private GameObject controlsUI = null;
 
     [Header("Options")]
     public Slider soundSlider;
@@ -79,5 +79,11 @@ public class MainMenuManager : MonoBehaviour
     {
         menuUI.SetActive(!menuUI.activeSelf);
         creditsUI.SetActive(!creditsUI.activeSelf);
+    }
+
+    public void ControlsMenu()
+    {
+        menuUI.SetActive(!menuUI.activeSelf);
+        controlsUI.SetActive(!controlsUI.activeSelf);
     }
 }

@@ -7,10 +7,10 @@ using TMPro;
 public class EnemyBarks : MonoBehaviour
 {
     [SerializeField]
-    private string[] enemyBarks;
+    private string[] enemyBarks = null;
     [SerializeField]
-    TMP_Text barkText;    
-    int barkIntervals;
+    TMP_Text barkText = null;    
+    float barkIntervals = 0;
     public bool isBarking = false;
 
     public IEnumerator BarkOrder()

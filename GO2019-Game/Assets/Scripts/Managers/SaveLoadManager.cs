@@ -11,7 +11,6 @@ public static class SaveLoadManager{
         BinaryFormatter formatter = new BinaryFormatter();
 
         string path = Application.persistentDataPath + "/data.sgd";
-        Debug.Log(path);
         FileStream stream = new FileStream(path, FileMode.Create);
 
         GameData data = new GameData();
@@ -22,7 +21,6 @@ public static class SaveLoadManager{
 
     public static GameData LoadGameData(){
         string path = Application.persistentDataPath + "/data.sgd";
-        Debug.Log(path);
         if(File.Exists(path)){
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);

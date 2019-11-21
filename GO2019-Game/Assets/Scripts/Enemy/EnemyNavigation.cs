@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyNavigation : MonoBehaviour
 {
-    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private NavMeshAgent agent = null;
 
-    [SerializeField] float maxSearchDist;
+    [SerializeField] private float maxSearchDist = 0;
 
     private GameObject player;
 

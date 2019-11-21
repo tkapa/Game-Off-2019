@@ -7,16 +7,16 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private KeyCode interactKey = KeyCode.E;
     [SerializeField] private LayerMask pickupMask = 0;
     [SerializeField] private float pickupDistance = 5f;
-    [SerializeField] private Material highlightMaterial;
-    [SerializeField] private Transform handTransform;
+    [SerializeField] private Material highlightMaterial = null;
+    [SerializeField] private Transform handTransform = null;
     [SerializeField] private LayerMask groundMask = 9;
-    [SerializeField] private Camera playerCamera;
+    [SerializeField] private Camera playerCamera = null;
 
-    private Material defaultMaterial;
-    private Transform currentSelection;
+    private Material defaultMaterial = null;
+    private Transform currentSelection = null;
     private bool handFull = false;
 
-    PlayerUIManager playerUIManager;
+    PlayerUIManager playerUIManager = null;
 
     void Start()
     {
