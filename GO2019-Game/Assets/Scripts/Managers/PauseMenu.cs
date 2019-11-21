@@ -58,4 +58,9 @@ public class PauseMenu : MonoBehaviour
             Application.Quit();
         #endif
     }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("Generation Testing");
+    }
 }

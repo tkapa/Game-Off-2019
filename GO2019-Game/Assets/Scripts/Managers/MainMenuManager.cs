@@ -15,6 +15,9 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     private GameObject creditsUI;
 
+    [SerializeField]
+    Button[] mmButtons;
+
     [Header("Options")]
     public Slider soundSlider;
     public Toggle invertYToggle;

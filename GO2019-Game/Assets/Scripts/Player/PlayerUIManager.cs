@@ -21,6 +21,8 @@ public class PlayerUIManager : MonoBehaviour
    
     [Header("Camera Shake")]
     public GameObject playerCamera;
+    public float duration;
+    public float magnitude;
 
     // Start is called before the first frame update
     void Start()
@@ -48,12 +50,12 @@ public class PlayerUIManager : MonoBehaviour
     {
         playerHealth -= damage;
         playerHealthBar.value = playerHealth;
-        StartCoroutine(ScreenShakeing(0.1f, 0.05f));
+        StartCoroutine(ScreenShakeing(duration, magnitude));
 
         if(playerHealth <= 0)
         {
             //Enter End Game State Here
-            Destroy(gameObject);
+            GetComponent<PauseMenu>().RestartLevel();
         }
     }
 
@@ -82,7 +84,7 @@ public class PlayerUIManager : MonoBehaviour
 
     
 
-    IEnumerator ScreenShakeing(float duration, float magnitude)
+    IEnumerator ScreenShakeing(float dur, float mag)
     {
         Vector3 originalCamPos = Camera.main.transform.localPosition;
 
@@ -95,12 +97,10 @@ public class PlayerUIManager : MonoBehaviour
             
             Camera.main.transform.localPosition = new Vector3(x, y, originalCamPos.z);
 
-            elapsed += Time.deltaTime;
-                
-            yield return null;
+            elapsed += Time.deltaTime;    
+            yield return null;        
         }
         
         Camera.main.transform.localPosition = originalCamPos;
-    
     }
 }

@@ -35,5 +35,6 @@ public class EnemyAttack : MonoBehaviour
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
         yield return new WaitForSeconds(damageTimer);
         gameObject.GetComponent<CapsuleCollider>().enabled = true;
+        yield return null;
     }
 }
