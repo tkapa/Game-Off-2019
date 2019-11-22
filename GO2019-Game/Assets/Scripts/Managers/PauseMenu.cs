@@ -43,6 +43,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu(){
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
         SaveLoadManager.SaveGameData();
         SceneManager.LoadScene("Menu");
     }
@@ -51,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("Quitting Game");
         SaveLoadManager.SaveGameData();
+        Cursor.lockState = CursorLockMode.None;
         
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
@@ -61,6 +63,7 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartLevel()
     {
+        Cursor.lockState = CursorLockMode.Locked; 
         SceneManager.LoadScene("Generation Testing");
     }
 }
