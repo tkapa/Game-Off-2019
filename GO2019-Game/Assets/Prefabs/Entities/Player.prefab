@@ -3225,6 +3225,7 @@ MonoBehaviour:
   soundSlider: {fileID: 5934448031337404270}
   invertYToggle: {fileID: 130364212}
   sensitivitySlider: {fileID: 4471885749542438920}
+  listener: {fileID: 4247538932809872913}
 --- !u!1 &6865591174150111344
 GameObject:
   m_ObjectHideFlags: 0
