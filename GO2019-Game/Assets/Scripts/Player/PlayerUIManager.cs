@@ -11,6 +11,11 @@ public class PlayerUIManager : MonoBehaviour
     public Slider playerHealthBar;
     public float playerHealth;
     public float playerHealthMax;
+    public GameObject deathUI = null;
+    public GameObject gameUI = null;
+    
+    [HideInInspector]
+    public static bool isDead = false;
 
     [Header("Stamina Bar")]
     public Slider playerStamBar;
@@ -54,8 +59,11 @@ public class PlayerUIManager : MonoBehaviour
 
         if(playerHealth <= 0)
         {
-            //Enter End Game State Here
-            GetComponent<PauseMenu>().RestartLevel();
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            isDead = true;
+            deathUI.SetActive(true);
+            gameUI.SetActive(false);
         }
     }
 

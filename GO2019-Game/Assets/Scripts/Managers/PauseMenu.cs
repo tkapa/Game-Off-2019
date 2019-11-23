@@ -8,15 +8,15 @@ public class PauseMenu : MonoBehaviour
     public static bool isPaused = false;
 
     public GameObject pauseUI;
-    public GameObject gameUI;
+    public static GameObject gameUI;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) && !PlayerUIManager.isDead){
             if(isPaused){
                 Resume();
-            } else{
+            } else {
                 Pause();
             }
         }
@@ -64,6 +64,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel()
     {
         Cursor.lockState = CursorLockMode.Locked; 
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Generation Testing");
     }
 }
