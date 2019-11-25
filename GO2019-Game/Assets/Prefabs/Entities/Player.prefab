@@ -4144,6 +4144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseUI: {fileID: 1356885663724340002}
+  gameUI: {fileID: 7274054414505413786}
 --- !u!114 &8943253412511513297
 MonoBehaviour:
   m_ObjectHideFlags: 0
