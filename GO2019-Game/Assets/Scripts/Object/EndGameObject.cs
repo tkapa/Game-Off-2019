@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndGameObject : InteractableObject
 {
     public override void ObjectInteraction(){
-        Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene("Menu");   
+        GameManager.floorNumber++;
+        SceneManager.LoadScene("Generation Testing");   
     }
 }
