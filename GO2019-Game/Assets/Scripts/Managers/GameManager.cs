@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static float soundFloat;
     public static bool invertedY;
     public static float mouseSensitivity;
+    public static float brightness;
 
     public static GameManager gameManagerInstance;
     
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     void DefaultSettings()
     {
-        soundFloat = 1f;
+        soundFloat = 0.5f;
         invertedY = false;
         mouseSensitivity = 1f;
     }
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
             soundFloat = data.volume;
             mouseSensitivity = data.sensitivity;
             invertedY = data.invertYAxis;
+            brightness = data.brightness;
         }
     }
 }
