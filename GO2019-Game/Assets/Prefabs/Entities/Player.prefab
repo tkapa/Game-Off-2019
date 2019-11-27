@@ -4573,7 +4573,7 @@ MonoBehaviour:
   soundSlider: {fileID: 5934448031337404270}
   invertYToggle: {fileID: 130364212}
   sensitivitySlider: {fileID: 4471885749542438920}
-  brightnessSlider: {fileID: 0}
+  brightnessSlider: {fileID: 2440099437595484317}
 --- !u!1 &6865591174150111344
 GameObject:
   m_ObjectHideFlags: 0

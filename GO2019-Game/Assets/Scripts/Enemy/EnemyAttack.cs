@@ -15,11 +15,6 @@ public class EnemyAttack : MonoBehaviour
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUIManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.tag == "Player")

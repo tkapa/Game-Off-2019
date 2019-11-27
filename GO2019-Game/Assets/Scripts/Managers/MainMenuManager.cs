@@ -26,7 +26,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void Start() 
     {
-        GameManager.gameManagerInstance.LoadGameData();
         soundSlider.value = GameManager.soundFloat;
         AudioListener.volume = GameManager.soundFloat;
 
@@ -44,7 +43,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void GenerationTesting()
     {
-        SceneManager.LoadScene("Generation Testing");
+        SceneManager.LoadScene("Intro Scene");
     }
 
     public void OptionsMenu(){

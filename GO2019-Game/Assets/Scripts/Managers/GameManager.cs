@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager gameManagerInstance;
     
-    void Awake(){
-        
+    void Awake(){        
+
         DontDestroyOnLoad (this);
             
         if (GameManager.gameManagerInstance == null) {
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         } else {
             Destroy(this.gameObject);
         }
+        LoadGameData();
     }
 
     void DefaultSettings()
