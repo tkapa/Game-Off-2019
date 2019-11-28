@@ -29,14 +29,11 @@ public class EnemyNavigation : MonoBehaviour
         RaycastHit hit;
         if(Vector3.Distance(transform.position, player.transform.position) < maxSearchDist )
         {
-            Debug.Log("Within Distance");
             if(Physics.Raycast(transform.position, (player.transform.position - transform.position), out hit, maxSearchDist))
             {
-                Debug.Log("Searching");
                 if(hit.transform.tag == "Player" && !GetComponent<EnemyBarks>().isBarking)
                 {
                     GetComponent<EnemyBarks>().isBarking = true;
-                    Debug.Log("You are seen!");
                     StartCoroutine(GetComponent<EnemyBarks>().BarkOrder());
                 } else if (hit.transform.tag != "Player" && GetComponent<EnemyBarks>().isBarking){
                     GetComponent<EnemyBarks>().isBarking = false;

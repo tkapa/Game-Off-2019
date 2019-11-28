@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class PlayerUIManager : MonoBehaviour
 {
     GameManager gameManager;
+
+    [SerializeField] AudioSource audioSource;
+
+    public AudioClip drinkingSound;
 
     [Header("Health Bar")]
     public Slider playerHealthBar;
@@ -13,6 +18,8 @@ public class PlayerUIManager : MonoBehaviour
     public float playerHealthMax;
     public GameObject deathUI = null;
     public GameObject gameUI = null;
+    public AudioClip damageSound;
+    public AudioClip gameOverSound;
     
     [HideInInspector]
     public static bool isDead = false;
@@ -23,6 +30,7 @@ public class PlayerUIManager : MonoBehaviour
     public float playerStamMax;
     public float staminaLossRate;
     public float staminaGainRate;
+    public AudioClip outOfStamSound;
    
     [Header("Camera Shake")]
     public GameObject playerCamera;
@@ -47,6 +55,7 @@ public class PlayerUIManager : MonoBehaviour
     {
         playerHealth += healing;
         playerHealthBar.value = playerHealth;
+        audioSource.PlayOneShot(drinkingSound, audioSource.volume);
         if(playerHealth > playerHealthMax)
             playerHealth = playerHealthMax;
     }
@@ -56,12 +65,16 @@ public class PlayerUIManager : MonoBehaviour
         playerHealth -= damage;
         playerHealthBar.value = playerHealth;
         StartCoroutine(ScreenShakeing(duration, magnitude));
+        audioSource.PlayOneShot(damageSound, audioSource.volume);
 
         if(playerHealth <= 0)
         {
+            duration = 0;
+            GameObject.FindGameObjectWithTag("Enemy").GetComponent<AudioSource>().enabled = false;
+            audioSource.PlayOneShot(gameOverSound, audioSource.volume);
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
-            isDead = true;
+            isDead = true;            
             deathUI.SetActive(true);
             gameUI.SetActive(false);
         }
@@ -71,6 +84,10 @@ public class PlayerUIManager : MonoBehaviour
     {
         playerStamina -= (20 * staminaLossRate) * Time.deltaTime;
         playerStamBar.value = playerStamina;
+        if(playerStamina <= 0)
+        {
+            audioSource.PlayOneShot(outOfStamSound, audioSource.volume);
+        }
     }
 
     public void GainStamina()
@@ -86,6 +103,7 @@ public class PlayerUIManager : MonoBehaviour
     {
         playerStamina += received;
         playerStamBar.value = playerStamina;
+        audioSource.PlayOneShot(drinkingSound, audioSource.volume);
         if(playerStamina > playerStamMax)
             playerStamina = playerStamMax;
     }
