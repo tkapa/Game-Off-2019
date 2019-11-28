@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3206915709961057749}
   - component: {fileID: 5281967577593969647}
   - component: {fileID: 9205189981392699963}
+  - component: {fileID: 2504774208361120757}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -78,6 +79,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!259 &2504774208361120757
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445886744978419888}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1
 --- !u!1 &7312315822040344622
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +112,7 @@ GameObject:
   - component: {fileID: 2891430800017503160}
   - component: {fileID: 959675600743808917}
   - component: {fileID: -7129641108322004185}
+  - component: {fileID: 4189861156500655623}
   m_Layer: 9
   m_Name: LRDU
   m_TagString: Untagged
@@ -200,3 +221,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileLocked: 0
+--- !u!259 &4189861156500655623
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312315822040344622}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1

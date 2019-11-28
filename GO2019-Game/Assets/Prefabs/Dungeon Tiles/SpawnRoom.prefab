@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8692959608370902577}
   - component: {fileID: 4912333502905185376}
   - component: {fileID: 2945117885108854215}
+  - component: {fileID: 1292357010963989708}
   m_Layer: 9
   m_Name: SpawnRoom
   m_TagString: Untagged
@@ -123,6 +124,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileLocked: 0
+--- !u!259 &1292357010963989708
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5587975939942737329}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1
 --- !u!1 &6109016113494913352
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +199,7 @@ GameObject:
   - component: {fileID: 5507324496467640731}
   - component: {fileID: 4165026200355509732}
   - component: {fileID: 3692674557244981780}
+  - component: {fileID: 524746067848522805}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -246,3 +267,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!259 &524746067848522805
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7579657725170112831}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2391006232989688469}
   - component: {fileID: 2134999242017972420}
   - component: {fileID: 2816881970689062608}
+  - component: {fileID: 4756315502761402291}
   m_Layer: 9
   m_Name: DL
   m_TagString: Untagged
@@ -124,6 +125,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileLocked: 0
+--- !u!259 &4756315502761402291
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441553985183625493}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1
 --- !u!1 &6470215016710231799
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +157,7 @@ GameObject:
   - component: {fileID: 932145486527102690}
   - component: {fileID: 4587059649799356097}
   - component: {fileID: 359041577569956088}
+  - component: {fileID: 4334208225888962568}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -233,6 +254,25 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!259 &4334208225888962568
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6470215016710231799}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1
 --- !u!1 &6636278650854137144
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +284,7 @@ GameObject:
   - component: {fileID: 8285044419433523915}
   - component: {fileID: 8811970518240245907}
   - component: {fileID: 4582154418301721761}
+  - component: {fileID: 7795758215583935757}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -311,6 +352,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!259 &7795758215583935757
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6636278650854137144}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1
 --- !u!1 &8691023952324331892
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +384,7 @@ GameObject:
   - component: {fileID: 4553664891603211751}
   - component: {fileID: 2576789302596236076}
   - component: {fileID: 403893988534537992}
+  - component: {fileID: 4206539392799525618}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -420,3 +481,22 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!259 &4206539392799525618
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8691023952324331892}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1

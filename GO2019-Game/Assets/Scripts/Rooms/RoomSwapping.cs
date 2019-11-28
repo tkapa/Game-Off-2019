@@ -5,7 +5,6 @@ using UnityEngine;
 public class RoomSwapping : MonoBehaviour
 {
     public bool tileLocked = false;
-
     private GameObject player;
     LevelGeneration levelGeneration;
 

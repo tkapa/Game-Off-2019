@@ -9,7 +9,7 @@ public class PlayerUIManager : MonoBehaviour
 {
     GameManager gameManager;
 
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSource = null;
 
     public AudioClip drinkingSound;
 
@@ -78,9 +78,10 @@ public class PlayerUIManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             isDead = true;          
-            deathText.text = "YOU SURVIVED " + GameManager.floorNumber + " FLOORS";
+            
             deathUI.SetActive(true);
             gameUI.SetActive(false);
+            deathText.text = "YOU SURVIVED " + GameManager.floorNumber + " FLOORS";
         }
     }
 

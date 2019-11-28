@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
     PlayerUIManager playerUIManager;
 
     AudioSource audioSource;
-    private float nextActionTime = 0.0f;
-    public float period = 0.1f;
     Vector3 velocity;
 
     bool isGrounded;

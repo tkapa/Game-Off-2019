@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6113902595444296104}
   - component: {fileID: 6599226138707763394}
   - component: {fileID: 7925690825201002318}
+  - component: {fileID: 7667196606329888821}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -78,6 +79,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!259 &7667196606329888821
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462389687604354065}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1
 --- !u!1 &1448742277713198964
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +156,7 @@ GameObject:
   - component: {fileID: 9185387806288608203}
   - component: {fileID: 8939717012882023898}
   - component: {fileID: 4656656858914006923}
+  - component: {fileID: 4888604316043825032}
   m_Layer: 9
   m_Name: FinalRoom
   m_TagString: Untagged
@@ -233,6 +254,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 10
+--- !u!259 &4888604316043825032
+LightProbeProxyVolume:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278117007972775514}
+  m_Enabled: 1
+  m_BoundingBoxMode: 0
+  m_ResolutionX: 2
+  m_ResolutionY: 2
+  m_ResolutionZ: 2
+  m_ResolutionProbesPerUnit: 0.25
+  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
+  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
+  m_ResolutionMode: 0
+  m_ProbePositionMode: 0
+  m_RefreshMode: 0
+  m_QualityMode: 1
 --- !u!1001 &1298764972012154464
 PrefabInstance:
   m_ObjectHideFlags: 0

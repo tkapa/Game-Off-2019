@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         soundFloat = 0.5f;
         invertedY = false;
         mouseSensitivity = 1f;
-        brightness = 0.1f;
+        brightness = 0.2f;
         floorNumber = 0;
     }
 
