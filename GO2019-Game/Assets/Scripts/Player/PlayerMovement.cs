@@ -10,8 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float sprintFOV;
     public float regularFOV;
-    public AudioClip[] walkingFootsteps;
-    public AudioClip[] runningFootsteps;
+    public AudioClip[] footstepSounds;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -23,12 +22,13 @@ public class PlayerMovement : MonoBehaviour
     PlayerUIManager playerUIManager;
 
     AudioSource audioSource;
-     private float nextActionTime = 0.0f;
-     public float period = 0.1f;
+    private float nextActionTime = 0.0f;
+    public float period = 0.1f;
     Vector3 velocity;
 
     bool isGrounded;
-    bool isSprinting;
+    bool isSprinting = false;
+    bool isMoving = false;
 
     float moveX = 0f;
     float moveZ = 0f;
@@ -43,6 +43,14 @@ public class PlayerMovement : MonoBehaviour
     private void Update() {
         moveX = Input.GetAxis("Horizontal");
         moveZ = Input.GetAxis("Vertical");
+
+        if((moveX != 0 || moveZ != 0) && !isMoving){
+            Debug.Log("Moving");
+            isMoving = true;
+            StartCoroutine(FootSteps());
+        } else if(moveX == 0 && moveZ == 0){
+            isMoving = false;
+        }
 
         if(Input.GetKeyDown(sprintInput)){
             isSprinting = true;
@@ -65,19 +73,10 @@ public class PlayerMovement : MonoBehaviour
 
         if(isGrounded && velocity.y < 0){
             velocity.y = -2f;
-        } else  if (!isGrounded){
+        } else if (!isGrounded){
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
         }
-
-        /*while(!isSprinting && (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Vertical") > 0))
-        {
-            //StartCoroutine(WalkingFootsteps());
-        }
-        while(isSprinting)
-        {
-            //RunningFootsteps();
-        }*/
     }
 
     // Update is called once per frame
@@ -86,16 +85,20 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);  
     }
 
-    IEnumerator WalkingFootsteps()
+    IEnumerator FootSteps()
     {
-        audioSource.PlayOneShot(walkingFootsteps[0], audioSource.volume);
-        yield return new WaitForSeconds(0.1f);
-        audioSource.PlayOneShot(walkingFootsteps[1], audioSource.volume);
-        yield return new WaitForSeconds(0.1f);
-    }
+        while(isMoving){
+            int rand = Random.Range(0, footstepSounds.Length);
 
-    void RunningFootsteps()
-    {
-
+            if(!isSprinting){
+                audioSource.pitch = 1;
+                audioSource.PlayOneShot(footstepSounds[rand]); 
+                yield return new WaitForSeconds(0.75f);              
+            } else{
+                audioSource.pitch = 1.5f;
+                audioSource.PlayOneShot(footstepSounds[rand]); 
+                yield return new WaitForSeconds(0.4f); 
+            }            
+        }
     }
 }

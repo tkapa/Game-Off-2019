@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using TMPro;
 
 public class PlayerUIManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class PlayerUIManager : MonoBehaviour
     public float playerHealth;
     public float playerHealthMax;
     public GameObject deathUI = null;
+    public TextMeshProUGUI deathText = null;
     public GameObject gameUI = null;
     public AudioClip damageSound;
     public AudioClip gameOverSound;
@@ -74,7 +76,9 @@ public class PlayerUIManager : MonoBehaviour
             audioSource.PlayOneShot(gameOverSound, audioSource.volume);
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
-            isDead = true;            
+            Cursor.visible = true;
+            isDead = true;          
+            deathText.text = "YOU SURVIVED " + GameManager.floorNumber + " FLOORS";
             deathUI.SetActive(true);
             gameUI.SetActive(false);
         }

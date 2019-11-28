@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
+    public PlayerMovement movement = null;
 
     public GameObject pauseUI;
     public GameObject gameUI;
@@ -25,6 +26,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume(){
         pauseUI.SetActive(false);
         gameUI.SetActive(true);
+
         SaveLoadManager.SaveGameData();
         Cursor.lockState = CursorLockMode.Locked; 
         Cursor.visible = false;       
@@ -37,6 +39,7 @@ public class PauseMenu : MonoBehaviour
         gameUI.SetActive(false);
         SaveLoadManager.SaveGameData();
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0f;
         isPaused = true;
     }

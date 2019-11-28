@@ -994,7 +994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOU ARE DEAD
+  m_text: YOU SURVIVED X FLOORS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffa75416b8e8ba5488710777c0f4b2d7, type: 2}
   m_sharedMaterial: {fileID: 7360534766574032147, guid: ffa75416b8e8ba5488710777c0f4b2d7,
@@ -1061,13 +1061,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -392.3634, w: 0}
   m_textInfo:
     textComponent: {fileID: 4922067306177938748}
-    characterCount: 12
+    characterCount: 21
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1338,7 +1338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2027757971091545455
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1348,19 +1348,19 @@ RectTransform:
   m_GameObject: {fileID: 1277037788544410922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.805, y: 0.805, z: 0.805}
   m_Children:
   - {fileID: 6774277069321947310}
   - {fileID: 4319240266783074219}
   - {fileID: 7300238679304623926}
   - {fileID: 5381785009685263976}
-  m_Father: {fileID: 2107283909212674728}
-  m_RootOrder: 2
+  m_Father: {fileID: 4247538932449569442}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00012207031}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 322, y: 180.99991}
+  m_SizeDelta: {x: 800, y: 449.68942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4870305423318378583
 CanvasRenderer:
@@ -1464,7 +1464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.63529414}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2243,7 +2243,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3093,6 +3093,7 @@ Transform:
   - {fileID: 4247538933486861527}
   - {fileID: 2107283909212674728}
   - {fileID: 6725136542837909308}
+  - {fileID: 2027757971091545455}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3131,8 +3132,9 @@ MonoBehaviour:
   gravity: -19.62
   sprintFOV: 110
   regularFOV: 90
-  walkingFootsteps: []
-  runningFootsteps: []
+  footstepSounds:
+  - {fileID: 8300000, guid: 8ddb3957505eef64e9d7535e6cf70074, type: 3}
+  - {fileID: 8300000, guid: 691172aaef8302b4885b7ebcad2ef55f, type: 3}
   groundCheck: {fileID: 4247538933486861527}
   groundDistance: 0.1
   groundMask:
@@ -3181,9 +3183,10 @@ MonoBehaviour:
   playerHealth: 0
   playerHealthMax: 100
   deathUI: {fileID: 1277037788544410922}
+  deathText: {fileID: 4922067306177938748}
   gameUI: {fileID: 7274054414505413786}
   damageSound: {fileID: 8300000, guid: a134491f71ef58845ae4be54aabfb575, type: 3}
-  gameOverSound: {fileID: 0}
+  gameOverSound: {fileID: 8300000, guid: 0a461a5c5e74b854ea3038949cfaea84, type: 3}
   playerStamBar: {fileID: 7011824448683423923}
   playerStamina: 0
   playerStamMax: 100
@@ -3192,7 +3195,7 @@ MonoBehaviour:
   outOfStamSound: {fileID: 8300000, guid: f05af5782f5e82f459150b354c391d84, type: 3}
   playerCamera: {fileID: 4247538932809872910}
   duration: 0.1
-  magnitude: 0.1
+  magnitude: 0.5
 --- !u!82 &6061509792919708153
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4100,7 +4103,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4595,7 +4598,6 @@ RectTransform:
   m_Children:
   - {fileID: 6238318784216434583}
   - {fileID: 6764601003398955041}
-  - {fileID: 2027757971091545455}
   m_Father: {fileID: 4247538932449569442}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4676,6 +4678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a6c2c9fcf0e5145b9c4453cbfb21f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement: {fileID: 4247538932449569445}
   pauseUI: {fileID: 1356885663724340002}
   gameUI: {fileID: 7274054414505413786}
 --- !u!114 &8943253412511513297
@@ -4745,7 +4748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6238318784216434583
 RectTransform:
   m_ObjectHideFlags: 0
