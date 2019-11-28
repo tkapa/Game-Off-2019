@@ -27,6 +27,8 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(false);
         gameUI.SetActive(true);
 
+        AudioListener.pause = false;
+
         SaveLoadManager.SaveGameData();
         Cursor.lockState = CursorLockMode.Locked; 
         Cursor.visible = false;       
@@ -37,6 +39,9 @@ public class PauseMenu : MonoBehaviour
     void Pause(){
         pauseUI.SetActive(true);
         gameUI.SetActive(false);
+
+        AudioListener.pause = true;
+
         SaveLoadManager.SaveGameData();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -46,7 +51,9 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu(){
         Time.timeScale = 1f;
+        AudioListener.pause = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SaveLoadManager.SaveGameData();
         SceneManager.LoadScene("Menu");
     }
@@ -55,8 +62,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Debug.Log("Quitting Game");
         SaveLoadManager.SaveGameData();
+
+        AudioListener.pause = false;
         Cursor.lockState = CursorLockMode.None;
-        
+        Cursor.visible = true;
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else
@@ -66,6 +75,7 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartLevel()
     {
+        AudioListener.pause = false;
         Cursor.lockState = CursorLockMode.Locked; 
         Time.timeScale = 1f;
         SceneManager.LoadScene("Generation Testing");

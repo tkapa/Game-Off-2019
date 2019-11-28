@@ -11,9 +11,11 @@ public class PlayerOptions : MonoBehaviour
     public Slider sensitivitySlider;
     public Slider brightnessSlider;
 
-    // Start is called before the first frame update
-    void Start()
-    {   
+    private void Start() {
+        InitializeOptions();
+    }
+
+    void InitializeOptions(){
         soundSlider.value = GameManager.soundFloat;
         AudioListener.volume = GameManager.soundFloat;
 
@@ -21,7 +23,7 @@ public class PlayerOptions : MonoBehaviour
         RenderSettings.ambientLight = new Color(GameManager.brightness, GameManager.brightness, GameManager.brightness, 1);
 
         sensitivitySlider.value = GameManager.mouseSensitivity;
-        invertYToggle.isOn = GameManager.invertedY;       
+        invertYToggle.isOn = GameManager.invertedY; 
     }
 
     public void SoundController(float val)

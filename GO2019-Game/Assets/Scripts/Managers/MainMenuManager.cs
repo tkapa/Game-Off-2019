@@ -24,8 +24,11 @@ public class MainMenuManager : MonoBehaviour
     public Slider sensitivitySlider;
     public Slider brightnessSlider;
 
-    public void Start() 
-    {
+    private void Start() {
+        InitializeOptions();
+    }
+
+    public void InitializeOptions(){
         soundSlider.value = GameManager.soundFloat;
         AudioListener.volume = GameManager.soundFloat;
 
