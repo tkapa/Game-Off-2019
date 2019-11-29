@@ -37,6 +37,7 @@ public class RoomSwapping : MonoBehaviour
         }
 
         if(!tileLocked && playerSeen && swapBufferTimer >= swapBufferTime){
+                FindObjectOfType<WallShiftingSound>().PlaySound();
                 var rand = Random.Range(0, levelGeneration.rooms.Length);
                 GameObject newRoom = (GameObject)Instantiate(levelGeneration.rooms[rand], transform.position, Quaternion.identity); 
 
