@@ -10,7 +10,7 @@ public static class SaveLoadManager{
     public static void SaveGameData(){
         BinaryFormatter formatter = new BinaryFormatter();
 
-        string path = Application.persistentDataPath + "/data.sgd";
+        string path = Application.persistentDataPath + "/data.tst";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         GameData data = new GameData();
@@ -20,7 +20,7 @@ public static class SaveLoadManager{
     }
 
     public static GameData LoadGameData(){
-        string path = Application.persistentDataPath + "/data.sgd";
+        string path = Application.persistentDataPath + "/data.tst";
         if(File.Exists(path)){
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);

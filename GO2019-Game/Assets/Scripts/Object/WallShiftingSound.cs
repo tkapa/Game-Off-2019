@@ -7,7 +7,9 @@ public class WallShiftingSound : MonoBehaviour
     public AudioSource source;
 
     public void PlaySound(){
-        source.pitch = Random.Range(-1.5f, 1.5f);
-        source.PlayOneShot(source.clip);
+        if(!source.isPlaying){
+            source.pitch = Random.Range(-1.5f, 1.5f);
+            source.PlayOneShot(source.clip);
+        }
     }
 }

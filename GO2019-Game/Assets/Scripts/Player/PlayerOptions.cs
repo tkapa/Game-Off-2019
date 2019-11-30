@@ -15,7 +15,7 @@ public class PlayerOptions : MonoBehaviour
         InitializeOptions();
     }
 
-    void InitializeOptions(){
+    public void InitializeOptions(){
         soundSlider.value = GameManager.soundFloat;
         AudioListener.volume = GameManager.soundFloat;
 

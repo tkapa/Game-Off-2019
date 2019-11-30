@@ -45,8 +45,9 @@ public class PlayerMovement : MonoBehaviour
         if((moveX != 0 || moveZ != 0) && !isMoving){
             isMoving = true;
             StartCoroutine(FootSteps());
-        } else if(moveX == 0 && moveZ == 0 && !isSprinting){
+        } else if(moveX == 0f && moveZ == 0f){
             isMoving = false;
+            StopCoroutine(FootSteps());
         }
 
         if(Input.GetKeyDown(sprintInput)){

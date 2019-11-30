@@ -21,8 +21,9 @@ public class GameManager : MonoBehaviour
             gameManagerInstance = this;
         } else {
             Destroy(this.gameObject);
-        }
-        LoadGameData();
+        }    
+
+        LoadGameData();        
     }
 
     void DefaultSettings()
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
             mouseSensitivity = data.sensitivity;
             invertedY = data.invertYAxis;
             brightness = data.brightness;
-        }
+            Debug.Log(data.brightness);
+        } 
     }
 }

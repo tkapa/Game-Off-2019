@@ -42,6 +42,7 @@ public class PlayerUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         playerHealthBar.maxValue = playerHealthMax;
         playerHealthBar.minValue = 0;

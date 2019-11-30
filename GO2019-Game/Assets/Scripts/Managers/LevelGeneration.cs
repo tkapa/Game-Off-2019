@@ -45,9 +45,6 @@ public class LevelGeneration : MonoBehaviour
         } else{
             timeBtwRoom -= Time.deltaTime;
         }
-
-        if(stoppedGeneration)
-            Destroy(this);
     }
 
     void Move(){
