@@ -19,7 +19,6 @@ public class EnemyAttack : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            Debug.Log("Hit");
             playerManager.TakeDamage(damage);
             StartCoroutine(ResetCollider());
         }

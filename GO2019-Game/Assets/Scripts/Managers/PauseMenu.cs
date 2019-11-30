@@ -60,7 +60,6 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame(){
         Time.timeScale = 1f;
-        Debug.Log("Quitting Game");
         SaveLoadManager.SaveGameData();
 
         AudioListener.pause = false;

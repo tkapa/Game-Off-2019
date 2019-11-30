@@ -14,7 +14,6 @@ public class PlayerSpawnPoint : MonoBehaviour
     void Update()
     {
         if(LevelGeneration.stoppedGeneration){
-            Debug.Log("Player Spawned");
             Instantiate(playerPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

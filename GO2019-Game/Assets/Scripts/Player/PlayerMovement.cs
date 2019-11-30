@@ -43,10 +43,9 @@ public class PlayerMovement : MonoBehaviour
         moveZ = Input.GetAxis("Vertical");
 
         if((moveX != 0 || moveZ != 0) && !isMoving){
-            Debug.Log("Moving");
             isMoving = true;
             StartCoroutine(FootSteps());
-        } else if(moveX == 0 && moveZ == 0){
+        } else if(moveX == 0 && moveZ == 0 && !isSprinting){
             isMoving = false;
         }
 

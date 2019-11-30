@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static bool invertedY;
     public static float mouseSensitivity;
     public static float brightness;
-    public static int floorNumber;
+    public static int floorNumber = 0;
 
     public static GameManager gameManagerInstance;
     
@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
         invertedY = false;
         mouseSensitivity = 5f;
         brightness = 0.3f;
-        floorNumber = 0;
     }
 
     public void SaveGameData(){
@@ -48,7 +47,6 @@ public class GameManager : MonoBehaviour
             mouseSensitivity = data.sensitivity;
             invertedY = data.invertYAxis;
             brightness = data.brightness;
-            floorNumber = data.floorNumber;
         }
     }
 }

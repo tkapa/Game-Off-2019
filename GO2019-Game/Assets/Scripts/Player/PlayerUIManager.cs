@@ -72,7 +72,7 @@ public class PlayerUIManager : MonoBehaviour
         if(playerHealth <= 0)
         {
             duration = 0;
-            GameObject.FindGameObjectWithTag("Enemy").GetComponent<AudioSource>().enabled = false;
+
             audioSource.PlayOneShot(gameOverSound, audioSource.volume);
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;

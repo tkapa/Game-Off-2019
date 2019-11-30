@@ -16,7 +16,6 @@ public class PickupableObject : InteractableObject
     }
 
     public virtual void UseObject(){
-        Debug.Log(gameObject.name + " Used");
         Destroy(gameObject);
     }
 

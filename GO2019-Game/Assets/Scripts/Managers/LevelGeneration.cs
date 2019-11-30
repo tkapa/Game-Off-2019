@@ -31,6 +31,7 @@ public class LevelGeneration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stoppedGeneration = false;
         int randStartingPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartingPos].transform.position;
         Instantiate(spawnRoom, transform.position, Quaternion.identity);
@@ -44,6 +45,9 @@ public class LevelGeneration : MonoBehaviour
         } else{
             timeBtwRoom -= Time.deltaTime;
         }
+
+        if(stoppedGeneration)
+            Destroy(this);
     }
 
     void Move(){
@@ -62,8 +66,7 @@ public class LevelGeneration : MonoBehaviour
             Vector3 newPos = new Vector3(transform.position.x + roomSize.x, 0, transform.position.z);
             transform.position = newPos;
                 
-            int rand = Random.Range(0, 5);
-            Instantiate(rooms[rand], transform.position, Quaternion.identity);
+            InstantiateRandomRoom(0,5);
 
             direction = Random.Range(1, 6);
             if(direction == 3){
@@ -82,8 +85,7 @@ public class LevelGeneration : MonoBehaviour
             Vector3 newPos = new Vector3(transform.position.x - roomSize.x, 0, transform.position.z);
             transform.position = newPos;
 
-            int rand = Random.Range(0, 5);
-            Instantiate(rooms[rand], transform.position, Quaternion.identity);
+            InstantiateRandomRoom(0,5);
 
             direction = Random.Range(3, 6);
         } else{
@@ -103,29 +105,32 @@ public class LevelGeneration : MonoBehaviour
                 roomDetector[0].GetComponent<RoomType>().RoomDestruction();
                     
                 if(downCounter >= 2){
-                    Instantiate(rooms[3], transform.position, Quaternion.identity);
+                    InstantiateRoom(rooms[3]);
                 } else{
-                    int randBottom = Random.Range(1, 4);
-                    if(randBottom == 2){
-                        randBottom = 1;
-                    }
-                    Instantiate(rooms[randBottom], transform.position, Quaternion.identity);
+                    InstantiateRandomRoom(1,4);
                 }                    
             }
 
             Vector3 newPos = new Vector3(transform.position.x, 0, transform.position.z + roomSize.y);
             transform.position = newPos;
 
-            int rand = Random.Range(2, 4);
-            Instantiate(rooms[rand], transform.position, Quaternion.identity);
+            InstantiateRandomRoom(2, 4);
 
             direction = Random.Range(1, 6);
         } else{
             Collider[] roomDetector = Physics.OverlapSphere(transform.position, 1, roomMask);
             roomDetector[0].GetComponent<RoomType>().RoomDestruction();
-
-            Instantiate(finalRoom, transform.position, Quaternion.identity);
+            InstantiateRoom(finalRoom);
             stoppedGeneration = true;
         }
+    }
+
+    void InstantiateRandomRoom(int minimumRoll, int maximumRoll){
+        int rand = Random.Range(minimumRoll, maximumRoll);
+        Instantiate(rooms[rand], transform.position, Quaternion.identity);
+    }
+
+    void InstantiateRoom(GameObject room){
+        Instantiate(room, transform.position, Quaternion.identity);
     }
 }

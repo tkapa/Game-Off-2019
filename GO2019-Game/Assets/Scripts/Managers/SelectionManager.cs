@@ -46,7 +46,6 @@ public class SelectionManager : MonoBehaviour
 
         RaycastHit hit;
         if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, pickupDistance, pickupMask)){
-            Debug.Log("Raycast hit");
             var selection = hit.transform;
 
             if(selection.GetComponent<PickupableObject>() && !handFull){
@@ -85,14 +84,12 @@ public class SelectionManager : MonoBehaviour
             if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, pickupDistance, groundMask)){
                 item.PlaceObject(new Vector3(hit.point.x, hit.point.y, hit.point.z));       
                 handFull = false;     
-                Debug.Log("Here");
             }            
         } else{
             item.UseObject();
             if(item.tag == "Healing Potion")
             {   
                 playerUIManager.TakeHealing(item.potionHealing);
-                Debug.Log("Healing");
             }
             if(item.tag == "Stamina Potion")
             {   
